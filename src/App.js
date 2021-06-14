@@ -29,7 +29,7 @@ function App() {
         } else {
             setTasks(getTasks);
         }
-    }, [getTasks])
+    }, [])
 
     // Add Task
     const addTask = (task) => {
@@ -89,6 +89,7 @@ function App() {
         })
 
         localStorage.setItem("taskAdded", JSON.stringify(myData));
+        window.location.reload();
     }
 
     return (
