@@ -1,22 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Button from './Button';
+import "../index.css";
 
-const Header = ({ title, onAdd, showAdd }) => {
+const Header = ({ showForm, changeTextAndColor }) => {
     return (
         <header className="header">
-            <h1>{title}</h1>
-            <Button onClick={onAdd}  color={showAdd ? 'red' : 'green'} text={showAdd ? 'Close' : 'Add' } />
+            <h2 className="app-header">Task Manager App</h2>
+            <Button onClick={showForm} color={changeTextAndColor ? 'red' : 'green'} text={changeTextAndColor ? 'Close' : 'Add'} />
         </header>
     )
 }
 
-Header.defaultProps = {
-    title: "Task Tracker",
-}
- 
-Header.propTypes = {
-    title: PropTypes.string.isRequired,
-}
-
-export default Header
+export default Header;

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,17 +8,32 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  background-image: url("./images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 600px;
+}
+
+.app-header {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.spinnerContainer {
+  margin: 20% auto;
+  max-width: 15%;
 }
 
 .container {
-  max-width: 500px;
+  max-width: 600px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
+  background-color: #ccc;
 }
 
 .header {
@@ -43,10 +59,7 @@ body {
 
 .btn:focus {
   outline: none;
-}
-
-.btn:active {
-  transform: scale(0.98);
+  color: white;
 }
 
 .btn-block {
@@ -54,21 +67,32 @@ body {
   width: 100%;
 }
 
+.taskHeader {
+  text-align: center;
+}
+
 .task {
   background: #f4f4f4;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
-}
-
-.task.reminder {
-  border-left: 5px solid green;
-}
-
-.task h3 {
+  border-radius: 5px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+}
+
+.textBold {
+  font-weight: bold;
+}
+
+.delIcon {
+  color: red;
+  cursor: pointer;
+}
+
+.editIcon {
+  color: blue;
+  cursor: pointer;
 }
 
 .add-form {
@@ -89,6 +113,10 @@ body {
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
+}
+
+.form-control input:focus {
+  outline: 0;
 }
 
 .form-control-check {

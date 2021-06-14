@@ -1,41 +1,51 @@
 import { useState } from 'react';
+import Swal from "sweetalert2";
 
-const AddTask = ({ onAdd }) => {
+const AddTask = ({ onSave }) => {
     const [text, setText] = useState('');
     const [day, setDay] = useState('');
-    const [reminder, setReminder] = useState(false);
 
     const onSubmit = (e) => {
         e.preventDefault();
 
-        if(!text) {
-            alert('Please add a task');
-            return;
+        if (!text && !day) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Fill in your task and date or close the form!'
+            })
+        } else if (!text && day) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Fill in your task!'
+            })
+        } else if (text && !day) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Fill in your date!'
+            })
+        } else {
+            onSave({ text, day });
         }
-
-        onAdd({ text, day, reminder });
 
         setText('');
         setDay('');
-        setReminder(false);
     }
 
     return (
         <form className="add-form" onSubmit={onSubmit}>
             <div className="form-control">
                 <label>Task</label>
-                <input type="text" placeholder="Add Task" value={text} onChange={(e) => setText(e.target.value)} />
+                <input type="text" placeholder="add task" value={text} onChange={(e) => setText(e.target.value)} />
             </div>
             <div className="form-control">
                 <label>Day & Time</label>
-                <input type="text" placeholder="Add Day & Time" value={day} onChange={(e) => setDay(e.target.value)} />
-            </div>
-            <div className="form-control form-control-check">
-                <label>Set Reminder</label>
-                <input type="checkbox" checked={reminder} value={reminder} onChange={(e) => setReminder(e.currentTarget.checked)}  />
+                <input type="text" placeholder="add day & time" value={day} onChange={(e) => setDay(e.target.value)} />
             </div>
 
-            <input type="submit" className="btn btn-block" value="Save Task"/>
+            <input type="submit" className="btn btn-block" value="Save Task" />
         </form>
     )
 }
