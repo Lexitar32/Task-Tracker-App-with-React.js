@@ -1,8 +1,9 @@
 // Importing Components
-import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
+// Importing React Hooks
+import { useState, useEffect } from 'react';
 // Importing Packages
 import { v4 as uuidv4 } from 'uuid';
 import Swal from "sweetalert2";
@@ -29,11 +30,11 @@ function App() {
         } else {
             setTasks(getTasks);
         }
+        // eslint-disable-next-line
     }, [])
 
     // Add Task
     const addTask = (task) => {
-
         const id = uuidv4();
         const newTask = { id, ...task }
 

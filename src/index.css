@@ -16,6 +16,11 @@ body {
   height: 600px;
 }
 
+.spinnerContainer {
+  margin: 20% auto;
+  max-width: 15%;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -25,11 +30,6 @@ body {
 
 .app-header {
   font-family: "Josefin Sans", sans-serif;
-}
-
-.spinnerContainer {
-  margin: 20% auto;
-  max-width: 15%;
 }
 
 .container {
@@ -65,10 +65,6 @@ body {
   display: block;
   width: 100%;
 }
-
-/* .taskHeader {
-  text-align: center;
-} */
 
 .task {
   background: #f4f4f4;
@@ -118,7 +114,28 @@ body {
   outline: 0;
 }
 
-footer {
-  margin-top: 30px;
-  text-align: center;
+@media (max-width: 425px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .app-header {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 98%;
+  }
+
+  .app-header {
+    font-size: 18px;
+  }
 }
