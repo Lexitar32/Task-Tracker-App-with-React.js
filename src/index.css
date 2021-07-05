@@ -116,7 +116,7 @@ body {
 
 @media (max-width: 768px) {
   .spinnerContainer {
-    margin: 100vh auto 0 auto;
+    margin: 100px auto 0 auto;
     max-width: 30%;
   }
 }
@@ -127,7 +127,7 @@ body {
   }
 
   .spinnerContainer {
-    margin: 100vh auto 0 auto;
+    margin: 100px auto 0 auto;
     max-width: 40%;
   }
 }
@@ -142,7 +142,7 @@ body {
   }
 
   .spinnerContainer {
-    margin: 100vh auto 0 auto;
+    margin: 100px auto 0 auto;
     max-width: 45%;
   }
 }
@@ -157,7 +157,7 @@ body {
   }
 
   .spinnerContainer {
-    margin: 100vh auto 0 auto;
+    margin: 100px auto 0 auto;
     max-width: 50%;
   }
 }
