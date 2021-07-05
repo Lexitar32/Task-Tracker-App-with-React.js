@@ -68,12 +68,18 @@ body {
 
 .task {
   background: #f4f4f4;
-  margin: 5px;
+  margin: 5px auto;
+  max-width: 100%;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+  overflow: scroll;
   display: flex;
   justify-content: space-between;
+}
+
+.task::-webkit-scrollbar {
+  display: none;
 }
 
 .textBold {
@@ -116,7 +122,7 @@ body {
 
 @media (max-width: 768px) {
   .spinnerContainer {
-    margin: 100px auto 0 auto;
+    margin: 250px auto 0 auto;
     max-width: 30%;
   }
 }
@@ -127,7 +133,7 @@ body {
   }
 
   .spinnerContainer {
-    margin: 100px auto 0 auto;
+    margin: 250px auto 0 auto;
     max-width: 40%;
   }
 }
@@ -142,7 +148,7 @@ body {
   }
 
   .spinnerContainer {
-    margin: 100px auto 0 auto;
+    margin: 250px auto 0 auto;
     max-width: 45%;
   }
 }
@@ -157,7 +163,7 @@ body {
   }
 
   .spinnerContainer {
-    margin: 100px auto 0 auto;
+    margin: 250px auto 0 auto;
     max-width: 50%;
   }
 }
