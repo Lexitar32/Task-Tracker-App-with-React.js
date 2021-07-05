@@ -114,9 +114,21 @@ body {
   outline: 0;
 }
 
+@media (max-width: 768px) {
+  .spinnerContainer {
+    margin: 100vh auto 0 auto;
+    max-width: 30%;
+  }
+}
+
 @media (max-width: 425px) {
   .container {
     max-width: 90%;
+  }
+
+  .spinnerContainer {
+    margin: 100vh auto 0 auto;
+    max-width: 40%;
   }
 }
 
@@ -128,14 +140,24 @@ body {
   .app-header {
     font-size: 20px;
   }
+
+  .spinnerContainer {
+    margin: 100vh auto 0 auto;
+    max-width: 45%;
+  }
 }
 
 @media (max-width: 320px) {
   .container {
-    max-width: 98%;
+    max-width: 95%;
   }
 
   .app-header {
     font-size: 18px;
+  }
+
+  .spinnerContainer {
+    margin: 100vh auto 0 auto;
+    max-width: 50%;
   }
 }
